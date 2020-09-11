@@ -1,0 +1,34 @@
+{
+  "name": "alidaodao-app-cos-deployer",
+  "version": "1.0.0",
+  "description": "Tencent Cloud Object Storage (COS) Enhanced version plugin of Hexo",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dislazy/alidaodao-app-cos-deployer"
+  },
+  "keywords": [
+    "hexo",
+    "cdn",
+    "deploy",
+    "upload",
+    "cos"
+  ],
+  "author": "Jack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dislazy/alidaodao-app-cos-deployer/issues"
+  },
+  "homepage": "https://github.com/dislazy/alidaodao-app-cos-deployer#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "lodash": "^4.17.20",
+    "hexo-fs": "^3.1.0",
+    "utility": "^1.16.3",
+    "request": "^2.79.0",
+    "cos-nodejs-sdk-v5": "^2.7.0"
+  }
+}
