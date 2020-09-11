@@ -1,4 +1,4 @@
-# hexo-deployer-cos-enhanced
+# hexo-alidaodao-app-cos-deployer
 
 Hexo静态博客部署到腾讯云对象存储服务的插件，部署完成后会自动刷新被更新文件的CDN缓存。同时支持图片文件上传到单独对象存储中。
 
@@ -26,7 +26,7 @@ Hexo静态博客部署到腾讯云对象存储服务的插件，部署完成后�
 ## 安装方法
 
 ``` bash
-npm install alidaodao-app-cos-deployer --save
+npm install hexo-alidaodao-app-cos-deployer --save
 ```
 
 ## 配置
