@@ -29,6 +29,6 @@
     "hexo-fs": "^3.1.0",
     "utility": "^1.16.3",
     "request": "^2.79.0",
-    "cos-nodejs-sdk-v5": "^2.7.0"
+    "cos-nodejs-sdk-v5": "^2.8.3"
   }
 }
