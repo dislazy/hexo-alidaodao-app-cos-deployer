@@ -47,9 +47,9 @@ deploy:
     secretKey: qXPCbxxxxxxxxxxxxxxxxxxxxsJZfdR
 ```
 
-`type`： 是固定死的，只能是 cos。
+`type`: cos
 
-`cdnUrl`： 是你的对象存储绑定的CDN域名，没有启用 CDN的话，推荐使用 [https://github.com/sdlzhd/hexo-deployer-cos](https://github.com/sdlzhd/hexo-deployer-cos)
+`cdnUrl`： 是你的对象存储绑定的CDN域名，没有启用 CDN的话，推荐使用 [https://github.com/dislazy/hexo-alidaodao-app-cos-deployer](https://github.com/dislazy/hexo-alidaodao-app-cos-deployer)
 
 `bucket` 和 `region`： 在腾讯云的对象存储中，新建或找到你的 bucket，然后找到 **默认域名** 信息，会看到一个类似这样的域名: `blog-1251123456.cos.ap-shanghai.myqcloud.com`，第一个点前面的 `blog-1251123456` 就是 `bucket` 名称，第二个点和第三个点之间的 `ap-shanghai`，就是你的 COS 所在地域，填写到 `region` 中。
 
