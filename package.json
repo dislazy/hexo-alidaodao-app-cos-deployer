@@ -1,7 +1,7 @@
 {
   "name": "hexo-alidaodao-app-cos-deployer",
-  "version": "1.3.0",
-  "description": "Tencent Cloud Object Storage (COS) Enhanced version plugin of Hexo",
+  "version": "1.4.0",
+  "description": "Tencent Cloud Object Storage (COS) version plugin of Hexo",
   "main": "index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,10 +25,10 @@
   "homepage": "https://github.com/dislazy/hexo-alidaodao-app-cos-deployer#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "lodash": "^4.17.20",
+    "cos-nodejs-sdk-v5": "^2.9.15",
     "hexo-fs": "^3.1.0",
-    "utility": "^1.16.3",
+    "lodash": "^4.17.20",
     "request": "^2.79.0",
-    "cos-nodejs-sdk-v5": "^2.9.9"
+    "utility": "^1.16.3"
   }
 }
