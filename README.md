@@ -32,19 +32,19 @@ npm install hexo-alidaodao-app-cos-deployer --save
 ``` yml
 url: http://yourSite.com
 deploy: 
-  type: cos
-  bucket: blog-1251123456
-  region: ap-shanghai
-  secretId: AKIDIgxxxxxxxxxxxxxxxxxxxx0SepjX
-  secretKey: qXPCbxxxxxxxxxxxxxxxxxxxxsJZfdR
-  cdnConfig:
-    enable: true
-    cdnUrl: http://yourCdnSite.com
-    bucket: static-1251123456
+  - type: cos
+    bucket: blog-1251123456
     region: ap-shanghai
-    folder: static-1251123456
     secretId: AKIDIgxxxxxxxxxxxxxxxxxxxx0SepjX
     secretKey: qXPCbxxxxxxxxxxxxxxxxxxxxsJZfdR
+    cdnConfig:
+      enable: true
+      cdnUrl: http://yourCdnSite.com
+      bucket: static-1251123456
+      region: ap-shanghai
+      folder: static-1251123456
+      secretId: AKIDIgxxxxxxxxxxxxxxxxxxxx0SepjX
+      secretKey: qXPCbxxxxxxxxxxxxxxxxxxxxsJZfdR
 ```
 
 `type`: cos
