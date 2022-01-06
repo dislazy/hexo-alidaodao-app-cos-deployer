@@ -1,6 +1,6 @@
 {
   "name": "hexo-alidaodao-app-cos-deployer",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Tencent Cloud Object Storage (COS) version plugin of Hexo",
   "main": "index",
   "scripts": {

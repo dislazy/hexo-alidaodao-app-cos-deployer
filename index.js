@@ -1,2 +1,2 @@
 'use strict';
-hexo.extend.deployer.register('cos', require('./lib/uploder'));
+hexo.extend.deployer.register('cos', require('./lib/main'));
