@@ -61,69 +61,18 @@ deploy:
 
 
 ## 配置加密
-1、创建一个空的node项目
+1、`cd crypyo` 进入加解密子项目
 
-2、然后引入crypto,一般node版本会带，如果没有自行引入即可`npm install crypto --save`
+2、`npm install`
 
-3、写一个js文件：crypto.js，内容如下：
+3、修改`index.js文件`，添加如下内容，然后运行`node index` 后查看输出内容即可：
 ```js
-const crypto = require('crypto');
-
-const algorithm = 'aes-256-ctr';
-const iv = crypto.randomBytes(16);
-
-//加密
-const encrypt = (text,key) =>{
-    const cipher = crypto.createCipheriv(algorithm, key, iv);
-    const encrypted = Buffer.concat([cipher.update(text), cipher.final()]);
-
-    return {
-        iv: iv.toString('hex'),
-        content: encrypted.toString('hex')
-    };
-}
-//解密
-const decrypt = (hash,key) =>{
-    const decipher = crypto.createDecipheriv(algorithm, key, Buffer.from(hash.iv, 'hex'));
-
-    const decrpytvalue= Buffer.concat([decipher.update(Buffer.from(hash.content, 'hex')), decipher.final()]);
-
-    return decrpytvalue.toString();
-}
-
-module.exports = {
-    encrypt,
-    decrypt
-};
-
-```
-4、再写一个js：crypyo-text.js。
-
-在js中填入你自己的盐值**secret**，以及秘钥信息**secretId**,**secretKey**,然后直接执行`node crypyo-text.js`，可获取加密后的内容，谨慎保存，然后配置到配置中即可
-```js
-const {decrypt,encrypt} = require('./lib/crypyo');
-const crypto = require ('crypto')
-
-const secret = 'xxx'
-let salt = crypto.createHash('sha256').update(String(secret)).digest('base64').substr(0, 32);
-
-
-const secretId = encrypt('xxx',salt);
-const secretKey = encrypt('xxx',salt);
-
-console.log('salt : ')
-console.log(salt)
-
-console.log('secretId：');
-
+const secret = '你自己设置的盐值'
+const secretId = encrypt('你的secretId',salt);
+const secretKey = encrypt('你的secretKey',salt);
+//使用console输出
 console.log(secretId);
-console.log('secretKey：');
-
 console.log(secretKey);
-console.log('--------')
-console.log(decrypt(secretId,salt));
-console.log(decrypt(secretKey,salt));
-
 ```
 
 ## 鸣谢

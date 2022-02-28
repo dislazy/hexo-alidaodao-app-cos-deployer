@@ -1,0 +1,14 @@
+{
+  "name": "alidaodao-app-crypto",
+  "version": "1.0.0",
+  "description": "crypto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jack",
+  "license": "MIT",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}
