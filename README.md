@@ -57,7 +57,7 @@ deploy:
 
 `secretId` 和 `secretKey`：在 COS控制台中，找到左侧的**密钥管理**，点进去，按照提示添加子账号，并设置秘钥。同时要给子账号赋予 COS相关的权限，还有CDN刷新的权限。不会配置的可以参考 [官方示例](https://cloud.tencent.com/document/product/228/14867)
 
-`encryptEnable` 设置为true，代表开启加密,加密需要有盐值`encryptSalt`，如果设置为true会将**secretId**以及**secretKey**进行加密，加密方法请查看配置加密
+`encryptEnable` 设置为true，代表开启加密,加密需要有盐值`encryptSalt`，如果设置为 `true` 会将 `secretId` 以及 `secretKey` 进行加密，加密方法请查看配置加密；若设置为 `false` 则不开启加密，配置方法参考如下
 
 
 ## 配置加密
@@ -73,6 +73,21 @@ const secretKey = encrypt('你的secretKey',salt);
 //使用console输出
 console.log(secretId);
 console.log(secretKey);
+```
+
+## 不配置加密
+
+``` yml
+url: http://yourSite.com
+deploy:
+  - type: cos
+    encryptEnable: false
+    bucket: hexo-xxxx
+    region: ap-beijing
+    secretId: yourSecretId
+    secretKey: yourSecretKey
+    cdnUrl: https://blog.bosong.online
+    cdnEnable: true
 ```
 
 ## 鸣谢
